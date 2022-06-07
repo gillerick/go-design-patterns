@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type NotificationBuilder struct {
 	Title    string
 	Subtitle string
@@ -43,6 +45,10 @@ func (nb *NotificationBuilder) setNotType(notType string) {
 }
 
 func (nb *NotificationBuilder) Build() (*Notification, error) {
+	//Error checking can be done the build stage
+	if nb.Icon != "" && nb.Subtitle == ""{
+		return nil, fmt.Errorf("You need to specify a subtitle when using an icon.")
+	}
 	return &Notification{
 		title:    nb.Title,
 		subtitle: nb.Subtitle,

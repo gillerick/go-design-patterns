@@ -6,6 +6,7 @@ func main() {
 	var builder = newNotificationBuilder()
 
 	builder.setTitle("New Notification")
+	builder.setSubtitle("Notification Subtitle")
 	builder.setIcon("icon.png")
 	builder.setImage("image.png")
 	builder.setPriority(10)
