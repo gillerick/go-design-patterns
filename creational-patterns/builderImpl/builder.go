@@ -43,5 +43,13 @@ func (nb *NotificationBuilder) setNotType(notType string) {
 }
 
 func (nb *NotificationBuilder) Build() (*Notification, error) {
-	return nil, nil
+	return &Notification{
+		title:    nb.Title,
+		subtitle: nb.Subtitle,
+		message:  nb.Message,
+		image:    nb.Image,
+		icon:     nb.Icon,
+		priority: nb.Priority,
+		notType:  nb.NotType,
+	}, nil
 }
