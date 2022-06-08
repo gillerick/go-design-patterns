@@ -23,5 +23,10 @@ var logger *MyLogger
 
 //ToDo: the getLoggerInstance function provides global access to the logger class instance
 func getLoggerInstance() *MyLogger {
+	if logger == nil{
+		fmt.Println("Creating Logger Instance")
+		logger = &MyLogger{}
+	}
+	fmt.Println("Returning Logger Instance")
 	return logger
 }
