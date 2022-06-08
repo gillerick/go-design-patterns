@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
 
 type MyLogger struct {
 	loglevel int
@@ -20,13 +23,18 @@ func (l *MyLogger) SetLogLevel(level int) {
 var logger *MyLogger
 
 //ToDo: Use the sync package to enforce goroutine safety
+//This ensure that code runs once and is only available to a single go-routine
+var once sync.Once
 
 //ToDo: the getLoggerInstance function provides global access to the logger class instance
 func getLoggerInstance() *MyLogger {
-	if logger == nil{
-		fmt.Println("Creating Logger Instance")
-		logger = &MyLogger{}
-	}
+	once.Do(func() {
+		if logger == nil {
+			fmt.Println("Creating Logger Instance")
+			logger = &MyLogger{}
+		}
+	})
+
 	fmt.Println("Returning Logger Instance")
 	return logger
 }
