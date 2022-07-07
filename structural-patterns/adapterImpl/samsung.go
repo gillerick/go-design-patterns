@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//The SamsungTV API already implements the generic television interface & therefore its methods can be called directly
 type SamsungTV struct {
 	vol int
 	channel int
