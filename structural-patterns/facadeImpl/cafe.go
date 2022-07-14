@@ -29,6 +29,7 @@ func makeLatte(size float32, foam bool){
 
 	milk := (size /8.0) * 2.0
 	latte.useMilk(milk)
+	latte.doFoam(foam)
 	latte.endCoffee()
 	fmt.Println("Latte is ready")
 }

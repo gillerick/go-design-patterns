@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 )
+
 //A complex Coffee API
 
 type CoffeeMachine struct {
@@ -43,4 +44,9 @@ func (c *CoffeeMachine) useHotWater(amount float32) float32 {
 	fmt.Println("Adding hot water: ", amount)
 	c.waterAmt = amount
 	return amount
+}
+
+func (c *CoffeeMachine) doFoam(useFoam bool) {
+	fmt.Println("Foam setting: ", useFoam)
+	c.addFoam = useFoam
 }
