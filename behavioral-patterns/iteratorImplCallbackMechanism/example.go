@@ -6,6 +6,8 @@ func main() {
 	//Note that by using a callback, we have created an isolation between the code that iterates over all the books,
 	//and the underlying implementation of the storage of the book objects in the library
 	// The callback function has no control over how many times it called. It is therefore a PUSH orientation
+	//One advantage of the callback interface is that it is very simple - your code just defines a function that
+	//will be called by the iterator for each item
 
 	//Using IterateBooks via a callback function
 	lib.IterateBooks(myBookCallback)
