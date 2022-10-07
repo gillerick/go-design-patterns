@@ -16,6 +16,17 @@ Other benefits
 1. Allows us to provide lazy instantiation (the class isn't instantiated until it is needed)
 2. Useful when you want to ensure that there's only one instance of a particular class in your application e.g in
    logging, application configuration, telemetry & analytics, debugging
+3. It therefore has the following benefits: (1) Prevent incorrect program behavior (2) Overuse of resources (3)
+   Inconsistent results
+
+Common use cases of the singleton include:
+
+- Thread pools
+- Caches
+- Dialog boxes
+- Objects that handle preferences
+- Registries
+- Objects that act as device drivers like printers and graphic cards
 
 ****Adapter Pattern****
 
