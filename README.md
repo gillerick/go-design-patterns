@@ -16,6 +16,28 @@ Other benefits
 1. Allows us to provide lazy instantiation (the class isn't instantiated until it is needed)
 2. Useful when you want to ensure that there's only one instance of a particular class in your application e.g in
    logging, application configuration, telemetry & analytics, debugging
+3. It therefore has the following benefits: (1) Prevent incorrect program behavior (2) Overuse of resources (3)
+   Inconsistent results
+
+Common use cases of the singleton include:
+
+- Thread pools
+- Caches
+- Dialog boxes
+- Objects that handle preferences
+- Registries
+- Objects that act as device drivers like printers and graphic cards
+
+****Adapter Pattern****
+
+Adapter pattern is a structural design pattern that describes a way for the interface of a given class or type to be
+used as if it were a different interface without the need to modify the code of the existing class.
+
+It is useful in situations when the application being developed needs access to older legacy code bases that, for one
+reason or the other, can't be changed. Or when working with APIs and subsystems you don't have ownership of and
+therefore can't make any changes to.
+
+The adapter pattern therefore allows otherwise incompatible objects to work together.
 
 ***Adapter Pattern***
 
@@ -48,3 +70,16 @@ This pattern is also referred to as a _publish and subscribe architecture_ or _e
 
 It is useful in scenarios where the changes in state of a given subject are unpredictable, and the number of interested
 observers cannot be known in advance, or changes during the execution of the program.
+
+****Iterator Pattern****
+
+_Iteration_ is the process of accessing the objects of a collection or container object in a sequential order.
+
+The iterator pattern describes a way of performing this operation without exposing the underlying implementation of the
+container object. In other words, the code that works on each element in the container should not have to know how the
+individual objects are stored by the container in order to access them.
+
+An example is a software system that controls a library containing various publications such as book and magazines. In
+this case the iterator pattern could be used to create an _iterator object_ that knows how to traverse the library so
+that in case the underlying implementation of the library storage changes, the _consumers_ of the library iterator would
+not need to change their code.
