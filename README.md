@@ -39,7 +39,18 @@ therefore can't make any changes to.
 
 The adapter pattern therefore allows otherwise incompatible objects to work together.
 
-****Facade Pattern****
+***Adapter Pattern***
+
+Adapter pattern is a structural design pattern that describes a way for the interface of a given class or type to be
+used as if it were a different interface without the need to modify the code of the existing class.
+
+It is useful in situations when the application being developed needs access to older legacy code bases that, for one
+reason or the other, can't be changed. Or when working with APIs and subsystems you don't have ownership of and
+therefore can't make any changes to.
+
+The adapter pattern therefore allows otherwise incompatible objects to work together.
+
+***Facade Pattern***
 
 This pattern is called facade because it is analogous to the architectural term for the front-facing part of a building
 that introduces one to the rest of the pattern.
@@ -50,7 +61,7 @@ It can also be used to adapt code for newer application, or when one is looking 
 between different parts of an application to make it easier to swap out different areas of functionality as requirement
 change.
 
-****Observer Pattern****
+***Observer Pattern***
 
 This describes a pattern where an observed object (subject) maintains a list of other objects that are interested in
 events and other state changes in the subject. These other objects are called **observers**
